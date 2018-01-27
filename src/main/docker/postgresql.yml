@@ -1,0 +1,11 @@
+version: '2'
+services:
+    jphone-postgresql:
+        image: postgres:9.6.5
+        # volumes:
+        #     - ~/volumes/jhipster/jphone/postgresql/:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=jphone
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432
