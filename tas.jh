@@ -1,0 +1,30 @@
+
+
+/**
+ * The Client entity.
+ */
+entity Client {
+	fullName String min(8),
+    email String required,
+    phoneNumber String required
+}
+
+/**
+ * The Manager entity.
+ */
+entity Manager {
+	fullname String,
+    login String min(6),
+	password String min(8),
+	email String
+}
+
+// Set pagination options
+paginate Client with pagination
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except Employee, Job
+// Set an angular suffix
+angularSuffix * with mySuffix
