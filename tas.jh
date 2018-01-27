@@ -1,10 +1,8 @@
-
-
 /**
  * The Client entity.
  */
 entity Client {
-	fullName String min(8),
+	fullName String minlength(8),
     email String required,
     phoneNumber String required
 }
@@ -14,17 +12,17 @@ entity Client {
  */
 entity Manager {
 	fullname String,
-    login String min(6),
-	password String min(8),
+    login String minlength(6),
+	password String minlength(8),
 	email String
 }
 
 // Set pagination options
 paginate Client with pagination
 
-dto * with mapstruct
+//dto * with mapstruct
 
 // Set service options to all except few
-service all with serviceImpl except Employee, Job
+//service all with serviceImpl except Employee, Job
 // Set an angular suffix
-angularSuffix * with mySuffix
+//angularSuffix * with mySuffix
