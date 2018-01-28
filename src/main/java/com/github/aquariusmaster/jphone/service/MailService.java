@@ -102,4 +102,16 @@ public class MailService {
         log.debug("Sending password reset email to '{}'", user.getEmail());
         sendEmailFromTemplate(user, "passwordResetEmail", "email.reset.title");
     }
+
+    @Async
+    public void sendEmailToAdminNewUserActivated(String userLogin, String adminEmail) {
+        log.debug("Sending email to admin about new user with login '{}'", userLogin);
+        Locale locale = Locale.forLanguageTag("en");
+        Context context = new Context(locale);
+        context.setVariable("userLogin", userLogin);
+        context.setVariable(BASE_URL, jHipsterProperties.getMail().getBaseUrl());
+        String content = templateEngine.process("newUserActivated", context);
+        String subject = messageSource.getMessage("email.activated.title", null, locale);
+        sendEmail(adminEmail, subject, content, false, true);
+    }
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{email.activated.title}">JHipster new user has been registered and activated</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="shortcut icon" th:href="@{|${baseUrl}/favicon.ico|}" />
+    </head>
+    <body>
+        <p>
+            Dear administrator!
+        </p>
+        <p th:text="#{email.activated.text}">
+            New user has been activated and waiting for access to clients database. \
+            To grant access please go to user profile and give him manager role.
+        </p>
+        <p>
+            <a th:href="@{|${baseUrl}/#/user-management/${userLogin}|}"
+               th:text="@{|${baseUrl}/#/user-management/${userLogin}|}">Activation Link</a>
+        </p>
+        <p>
+            <span th:text="#{email.activation.text2}">Regards, </span>
+            <br/>
+            <em th:text="#{email.signature}">JHipster.</em>
+        </p>
+    </body>
+</html>

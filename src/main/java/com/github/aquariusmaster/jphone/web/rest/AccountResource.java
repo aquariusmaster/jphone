@@ -78,6 +78,8 @@ public class AccountResource {
         if (!user.isPresent()) {
             throw new InternalServerErrorException("No user was found for this reset key");
         }
+        User admin = userService.getUserWithAuthoritiesByLogin("admin").get();
+        mailService.sendEmailToAdminNewUserActivated(user.get().getLogin(), admin.getEmail());
     }
 
     /**
