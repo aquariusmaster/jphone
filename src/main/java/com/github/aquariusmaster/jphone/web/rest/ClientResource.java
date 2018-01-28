@@ -2,6 +2,7 @@ package com.github.aquariusmaster.jphone.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
 import com.github.aquariusmaster.jphone.domain.Client;
+import com.github.aquariusmaster.jphone.security.AuthoritiesConstants;
 import com.github.aquariusmaster.jphone.service.ClientService;
 import com.github.aquariusmaster.jphone.web.rest.errors.BadRequestAlertException;
 import com.github.aquariusmaster.jphone.web.rest.util.HeaderUtil;
@@ -14,6 +15,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -28,6 +30,7 @@ import java.util.Optional;
  */
 @RestController
 @RequestMapping("/api")
+@Secured(AuthoritiesConstants.MANAGER)
 public class ClientResource {
 
     private final Logger log = LoggerFactory.getLogger(ClientResource.class);
