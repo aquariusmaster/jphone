@@ -1,4 +1,15 @@
-# jphone
+# jphone 
+## Service for managing clients information
+
+This application consist of two tier: frontend(Angular 5) and backend(Java).
+
+App run on aws ec2 at: [http://j-phone.duckdns.org](http://j-phone.duckdns.org)
+
+Docker image available on: [https://hub.docker.com/r/anderb/jphone/](https://hub.docker.com/r/anderb/jphone/) 
+
+## 
+## Instruction
+
 This application was generated using JHipster 4.13.3, you can find documentation and help at [http://www.jhipster.tech/documentation-archive/v4.13.3](http://www.jhipster.tech/documentation-archive/v4.13.3).
 
 ## Development
