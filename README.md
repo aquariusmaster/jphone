@@ -3,7 +3,7 @@
 
 This application consist of two tier: frontend(Angular 5) and backend(Java).
 
-App run on aws ec2 at: [http://j-phone.duckdns.org](http://j-phone.duckdns.org)
+App runs on aws ec2 at: [http://j-phone.duckdns.org](http://j-phone.duckdns.org)
 
 Docker image available on: [https://hub.docker.com/r/anderb/jphone/](https://hub.docker.com/r/anderb/jphone/) 
 
