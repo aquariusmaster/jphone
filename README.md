@@ -1,7 +1,7 @@
 # jphone 
 ## Service for managing clients information
 
-This application consist of two tier: frontend(Angular 5) and backend(Java).
+This application consist of two tiers: frontend(Angular 5) and backend(Java). 
 
 App runs on aws ec2 at: [http://j-phone.duckdns.org](http://j-phone.duckdns.org)
 
